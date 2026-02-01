@@ -111,25 +111,29 @@
         .ooo-symbol {
             position: relative;
             z-index: 10;
-            font-family: 'Special Elite', 'Courier New', monospace;
-            font-size: 4.5em;
-            color: #f5e6d3;
-            text-shadow: 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .o-circle {
+            border-radius: 50%;
+            background: radial-gradient(circle, #f5e6d3 0%, #d4af6b 100%);
+            box-shadow: 
                 0 0 20px rgba(255, 220, 150, 0.8),
                 0 0 40px rgba(212, 175, 107, 0.4),
-                2px 2px 4px rgba(0, 0, 0, 0.8);
-            letter-spacing: -8px;
+                inset 0 0 20px rgba(255, 255, 255, 0.3);
         }
 
         .o-small {
-            font-size: 0.35em;
-            vertical-align: middle;
-            opacity: 0.95;
+            width: 45px;
+            height: 45px;
         }
 
         .o-large {
-            font-size: 1em;
-            font-weight: bold;
+            width: 90px;
+            height: 90px;
         }
 
         h1 {
@@ -245,8 +249,14 @@
                 height: 250px;
             }
             
-            .ooo-symbol {
-                font-size: 3em;
+            .o-small {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .o-large {
+                width: 60px;
+                height: 60px;
             }
             
             h1 {
@@ -276,7 +286,9 @@
                     <div class="horizontal-line"></div>
                 </div>
                 <div class="ooo-symbol">
-                    <span class="o-small">o</span><span class="o-large">O</span><span class="o-small">o</span>
+                    <div class="o-circle o-small"></div>
+                    <div class="o-circle o-large"></div>
+                    <div class="o-circle o-small"></div>
                 </div>
             </div>
             <h1>Lyrics</h1>
